@@ -24,9 +24,9 @@ Can you describe the image? Can you desrcibe the sound? What do you see in this 
 
 Thus, in this project, we demonstrate how images and sounds can be used for indirect prompt and instruction injection in multi-modal LLMs. An attacker generates an adversarial perturbation corresponding to the prompt and blends it into an image or audio recording. When the user asks the (unmodified, benign) model about the perturbed image or audio, the perturbation steers the model to output the attacker-chosen text and/or make the subsequent dialog follow the attacker’s instruction. We demonstrate these attacks against two open-source multi-modal LLMs, LLaVA and PandaGPT.
 
-| Image example                             | Sound example                                              |
-| ----------------------------------------- | ---------------------------------------------------------- |
-| [llava-potter](./images/llava-potter.png) | ![panda-audio-phishing](./images/panda-audio-phishing.png) |
+| Image example                                   | Sound example                                                    |
+| ----------------------------------------------- | ---------------------------------------------------------------- |
+| [llava-potter](./images/llava-potter.png =20%x) | ![panda-audio-phishing](./images/panda-audio-phishing.png =20%x) |
 
 ## Install
 

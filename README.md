@@ -1,4 +1,4 @@
-<h1 align='center' style="text-align:center; font-weight:bold; font-size:2.0em"> (Ab)using Images and Sounds for<br>Indirect Instruction Injection in Multi-Modal LLMs
+<h1 align='center' style="text-align:center; font-weight:bold; font-size:2.0em"> (Ab)using Images and Sounds for<br>Indirect Instruction Injection in Multi-Modal LLMs </h1>
 
 <p align='center' style="text-align:center;font-size:0.8em;">
     <a>Eugene Bagdasaryan</a>&nbsp;

@@ -69,13 +69,13 @@ We use two open-source multi-modal LLMs, LLaVA and PandaGPT to experiment our at
 
 4. Download model weights for LLaVA
 
-   Please refer to this [link](https://github.com/haotian-liu/LLaVA/tree/main#llava-weights) from [LLaVA](https://github.com/haotian-liu/LLaVA) repository to download the model weights.
+   Please refer to this [link](https://github.com/haotian-liu/LLaVA/tree/main#llava-weights) from [LLaVA](https://github.com/haotian-liu/LLaVA) repository to download the model weights and save it to the model folder.
 
    We use LLaVA-7B weights in our experiments.
 
 5. Download model weights for PandaGPT
 
-   Please refer to this [link](https://github.com/yxuansu/PandaGPT#2-running-pandagpt-demo-back-to-top) from [PandaGPT](https://github.com/yxuansu/PandaGPT) repository to download the model weights.
+   Please refer to this [link](https://github.com/yxuansu/PandaGPT#2-running-pandagpt-demo-back-to-top) from [PandaGPT](https://github.com/yxuansu/PandaGPT) repository to download the model weights and save it to the model folder.
 
    We use pandagpt_7b_max_len_1024 weight in our experiments.
 

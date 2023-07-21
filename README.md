@@ -81,6 +81,8 @@ We use two open-source multi-modal LLMs, LLaVA and PandaGPT to experiment our at
 
 # Experiments
 
+We run all of the experiments on a single NVIDIA Quadro RTX 6000 24GB GPU.
+
 ## Injection Attacks in LLaVA
 
 ```bash

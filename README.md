@@ -84,6 +84,7 @@ We use two open-source multi-modal LLMs, LLaVA and PandaGPT to experiment our at
 ## Injection Attacks in LLaVA
 
 ```bash
+conda activate llava_injection
 cd llava_image_injection/eval/
 ```
 
@@ -110,7 +111,7 @@ conv_mode = 'multimodal'
 tokenizer, image_processor, vision_tower, unnorm, embeds, projector, prompt, input_ids = image_instruction.load_param(MODEL_NAME, model, init_tokenizer, init_query)
 ```
 
-### Load Iiage
+### Load image
 
 ```bash
 image = image_instruction.load_image(image_file)

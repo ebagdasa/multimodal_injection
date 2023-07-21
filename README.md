@@ -167,7 +167,7 @@ image_injection.run_result(full_X, prompt, init_query, cow_query_list, model, to
 image_injection.run_result(partial_X, prompt, init_query, cow_query_list, model, tokenizer, unnorm)
 ```
 
-Load the perturbed image we trained before and run the model inference with it
+We can also load the perturbed image that was trained before and run the model inference with it
 
 ```bash
 # Load the previous perturbed image first

@@ -131,7 +131,7 @@ y = torch.tensor([y]).cuda()
 
 ---
 
-### You can train the image with injection by doing fully perturbation
+### Train the image with instruction injection by doing fully perturbation
 
 ```bash
 full_X = image_injection.train_image_entire(input_ids, X, y, model, vision_tower,
@@ -140,7 +140,7 @@ projector, epochs=100, lr=0.01)
 image_instruction.save_image(full_X, unnorm, 'perturb_full_X')
 ```
 
-### You can also train the image with injection by doing partial perturbation
+### Train the image with instruction injection by doing partial perturbation
 
 ```bash
 # Define how many rows you want to perturb by changing the parameter 'rows'
@@ -167,7 +167,7 @@ image_injection.run_result(full_X, prompt, init_query, cow_query_list, model, to
 image_injection.run_result(partial_X, prompt, init_query, cow_query_list, model, tokenizer, unnorm)
 ```
 
-We can also load the image we trained before and run the model inference
+Load the perturbed image we trained before and run the model inference with it
 
 ```bash
 # Load the previous perturbed image first

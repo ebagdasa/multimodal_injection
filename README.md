@@ -69,13 +69,13 @@ We use two open-source multi-modal LLMs, LLaVA and PandaGPT to experiment our at
 
 4. Download model weights for LLaVA
 
-   Please refer to this [link](https://github.com/haotian-liu/LLaVA/tree/main#llava-weights) from [LLaVA](https://github.com/haotian-liu/LLaVA) repository to download the model weights and save it to the model folder.
+   Please refer to this [link](https://github.com/haotian-liu/LLaVA/tree/main#llava-weights) from [LLaVA](https://github.com/haotian-liu/LLaVA) repository to download the model weights and save it to the models folder.
 
    We use LLaVA-7B weights in our experiments.
 
 5. Download model weights for PandaGPT
 
-   Please refer to this [link](https://github.com/yxuansu/PandaGPT#2-running-pandagpt-demo-back-to-top) from [PandaGPT](https://github.com/yxuansu/PandaGPT) repository to download the model weights and save it to the model folder.
+   Please refer to this [link](https://github.com/yxuansu/PandaGPT#2-running-pandagpt-demo-back-to-top) from [PandaGPT](https://github.com/yxuansu/PandaGPT) repository to download the model weights and save it to the models folder.
 
    We use pandagpt_7b_max_len_1024 weight in our experiments.
 
@@ -93,7 +93,7 @@ In **run_image_injection.ipynb**
 ### Load model
 
 ```bash
-MODEL_NAME = PATH_TO_THE_MODEL_WEIGHTS
+MODEL_NAME = PATH_TO_THE_MODEL_WEIGHTS # Saved in the model folder
 model, init_tokenizer = image_instruction.load_model(MODEL_NAME)
 ```
 
@@ -101,7 +101,7 @@ model, init_tokenizer = image_instruction.load_model(MODEL_NAME)
 
 ```bash
 init_query = 'Can you describe this image?'
-image_file = '/home/llma/LLaVA/llava/serve/examples/waterview.jpg'
+image_file = '../../original_images/waterview.jpg' # PATH_TO_THE_IMAGE
 conv_mode = 'multimodal'
 ```
 

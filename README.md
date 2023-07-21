@@ -1,6 +1,6 @@
-<h1 align='center' style="text-align:center; font-weight:bold; font-size:2.0em"> (Ab)using Images and Sounds for<br>Indirect Instruction Injection in Multi-Modal LLMs </h1>
+<h1 align='center' style="text-align:center; font-weight:bold; font-size:2.5em"> (Ab)using Images and Sounds for<br>Indirect Instruction Injection in Multi-Modal LLMs </h1>
 
-<p align='center' style="text-align:center;font-size:0.8em;">
+<p align='center' style="text-align:center;font-size:1em;">
     <a>Eugene Bagdasaryan</a>&nbsp;,&nbsp;
     <a>Tsung-Yin Hsieh</a>&nbsp;,&nbsp;
     <a>Ben Nassi</a>&nbsp;,&nbsp;
@@ -12,7 +12,7 @@
 
 [[arXiv Paper](https://arxiv.org/abs/2307.10490)]
 
-# This repository is still work in progress.
+## This repository is still work in progress.
 
 # Contents
 

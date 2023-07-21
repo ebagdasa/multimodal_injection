@@ -94,7 +94,7 @@ In **run_image_injection.ipynb**
 
 ```bash
 MODEL_NAME = PATH_TO_THE_MODEL_WEIGHTS # Saved in the model folder
-model, init_tokenizer = image_instruction.load_model(MODEL_NAME)
+model, init_tokenizer = image_injection.load_model(MODEL_NAME)
 ```
 
 ### Set path of the input image file and the initial query
@@ -108,13 +108,13 @@ conv_mode = 'multimodal'
 ### Load model parameters
 
 ```bash
-tokenizer, image_processor, vision_tower, unnorm, embeds, projector, prompt, input_ids = image_instruction.load_param(MODEL_NAME, model, init_tokenizer, init_query)
+tokenizer, image_processor, vision_tower, unnorm, embeds, projector, prompt, input_ids = image_injection.load_param(MODEL_NAME, model, init_tokenizer, init_query)
 ```
 
 ### Load image
 
 ```bash
-image = image_instruction.load_image(image_file)
+image = image_injection.load_image(image_file)
 image_tensor = image_processor.preprocess(image, return_tensors='pt')['pixel_values'][0].unsqueeze(0).half().cuda()
 X = image_tensor.clone().detach().requires_grad_(True)
 ```
@@ -137,7 +137,7 @@ y = torch.tensor([y]).cuda()
 full_X = image_injection.train_image_entire(input_ids, X, y, model, vision_tower,
 projector, epochs=100, lr=0.01)
 
-image_instruction.save_image(full_X, unnorm, 'perturb_full_X')
+image_injection.save_image(full_X, unnorm, 'perturb_full_X')
 ```
 
 ### Train the image with instruction injection by doing partial perturbation
@@ -146,7 +146,7 @@ image_instruction.save_image(full_X, unnorm, 'perturb_full_X')
 # Define how many rows you want to perturb by changing the parameter 'rows'
 partial_X = image_injection.train_image_partial(input_ids, X, y, model, vision_tower, projector, epochs=100, lr=0.01, rows=20)
 
-image_instruction.save_image(partial_X, unnorm, 'perturb_partial_X')
+image_injection.save_image(partial_X, unnorm, 'perturb_partial_X')
 ```
 
 ### Run Model Inference with the Perturbed Images

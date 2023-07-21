@@ -230,6 +230,8 @@ I see a wooden pier, a bench, and a lake in this image.
 ********
 ```
 
+---
+
 We can also load the perturbed image that was trained before and run the model inference with it
 
 ```bash

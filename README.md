@@ -89,7 +89,6 @@ Note: Because LLMs’ responses are stochastic and depend on the temperature, re
 
 ```bash
 conda activate llava_injection
-cd llava_image_injection/eval/
 ```
 
 In **run_image_injection.ipynb**
@@ -233,7 +232,7 @@ We can also load the perturbed image that was trained before and run the model i
 
 ```bash
 # Load the previous perturbed image first
-load_X = torch.load('../../result_images/path_to_the_image.pt')
+load_X = torch.load('result_images/path_to_the_image.pt')
 
 # Run the model inference result
 image_injection.run_result(load_X, prompt, init_query, hp_query_list, model, tokenizer, unnorm)

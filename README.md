@@ -12,7 +12,9 @@
 
 [[arXiv Paper](https://arxiv.org/abs/2307.10490)]
 
-## This repository is still work in progress.
+
+
+**This repository is still work in progress.** Please raise an issue or email (eugene@cs.cornell.edu) for questions/problems.
 
 # Contents
 
@@ -22,6 +24,7 @@
   - [Generate Images and Sounds with Indirect Instruction Injection](#generate-images-and-sounds-with-indirect-instruction-injection)
   - [Inference](#inference)
   - [Examples](#examples)
+- [Citation](#citation)
 
 # Overview
 
@@ -276,3 +279,16 @@ Absolutely! We are both Hogwarts Schools, and you can see the differences and si
 ---
 
 ### Examples
+
+
+## Citation
+
+```
+@article{bagdasaryan2023ab,
+  title={(Ab) using Images and Sounds for Indirect Instruction Injection in Multi-Modal LLMs},
+  author={Bagdasaryan, Eugene and Hsieh, Tsung-Yin and Nassi, Ben and Shmatikov, Vitaly},
+  journal={arXiv preprint arXiv:2307.10490},
+  year={2023}
+}
+```
+

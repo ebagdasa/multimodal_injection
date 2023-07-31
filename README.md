@@ -19,9 +19,12 @@
 - [Overview](#overview)
 - [Install](#install)
 - [Experiments](#experiments)
-  - [Generate Images and Sounds with Indirect Instruction Injection](#generate-images-and-sounds-with-indirect-instruction-injection)
-  - [Inference](#inference)
-  - [Examples](#examples)
+
+  - [Injection Attacks in LLaVA](#injection-attacks-in-llava)
+  - [Injection Attacks in PandaGPT](#injection-attacks-in-pandagpt)
+    - [Image Perturbation](#image-perturbation)
+    - [Sound Perturbation](#sound-perturbation)
+
 - [Citation](#citation)
 
 # Overview
@@ -40,7 +43,7 @@ Thus, in this project, we demonstrate how images and sounds can be used for indi
 
 # Install
 
-We use two open-source multi-modal LLMs, LLaVA and PandaGPT to experiment our attacks. The following installation instructions are inheirted from the [LLaVA](https://github.com/haotian-liu/LLaVA) and the [PandaGPT](https://github.com/yxuansu/PandaGPT) repository.
+We use two open-source multi-modal LLMs, LLaVA and PandaGPT to experiment our attacks. The following installation instructions are inheirted from the [<span style="color: orange;">LLaVA</span>](https://github.com/haotian-liu/LLaVA) and the [<span style="color: green;">PandaGPT</span>](https://github.com/yxuansu/PandaGPT) repository.
 
 1. Clone this repository and navigate to multimodal injection folder
 
@@ -49,7 +52,7 @@ We use two open-source multi-modal LLMs, LLaVA and PandaGPT to experiment our at
    cd multimodal_injection
    ```
 
-2. Create conda environment for LLaVA
+2. Create conda environment for <span style="color: orange;">LLaVA</span>
 
    ```bash
    cd llava_injection
@@ -59,7 +62,7 @@ We use two open-source multi-modal LLMs, LLaVA and PandaGPT to experiment our at
    pip install -e .
    ```
 
-3. Create conda environment for PandaGPT
+3. Create conda environment for <span style="color: green;">PandaGPT</span>
 
    ```bash
    cd pandagpt_injection
@@ -68,21 +71,21 @@ We use two open-source multi-modal LLMs, LLaVA and PandaGPT to experiment our at
    pip install -r requirements.txt
    ```
 
-4. Download model weights for LLaVA
+4. Download model weights for <span style="color: orange;">LLaVA</span>
 
-   Please refer to this [link](https://github.com/haotian-liu/LLaVA/tree/main#llava-weights) from [LLaVA](https://github.com/haotian-liu/LLaVA) repository to download the model weights and save it to the models folder.
+   Please refer to this [link](https://github.com/haotian-liu/LLaVA/tree/main#llava-weights) from [<span style="color: orange;">LLaVA</span>](https://github.com/haotian-liu/LLaVA) repository to download the model weights and save it to the models folder.
 
    We use LLaVA-7B weights in our experiments.
 
-5. Download model weights for PandaGPT
+5. Download model weights for <span style="color: green;">PandaGPT</span>
 
-   Please refer to this [link](https://github.com/yxuansu/PandaGPT#2-running-pandagpt-demo-back-to-top) from [PandaGPT](https://github.com/yxuansu/PandaGPT) repository to download the model weights and save it to the models folder.
+   Please refer to this [link](https://github.com/yxuansu/PandaGPT#2-running-pandagpt-demo-back-to-top) from [<span style="color: green;">PandaGPT</span>](https://github.com/yxuansu/PandaGPT) repository to download the model weights and save it to the models folder.
 
    We use pandagpt_7b_max_len_1024 weight in our experiments.
 
 # Experiments
 
-We run all of the experiments on a single NVIDIA Quadro RTX 6000 24GB GPU.
+We run all of the experiments using [<span style="color: orange;">LLaVA</span>](https://github.com/ebagdasa/multimodal_injection/tree/main#injection-attacks-in-llava) and [<span style="color: green;">PandaGPT</span>](https://github.com/ebagdasa/multimodal_injection/tree/main#injection-attacks-in-pandagpt) on a single NVIDIA Quadro RTX 6000 24GB GPU.
 
 Note: Because LLMs’ responses are stochastic and depend on the temperature, replication of the examples presented in the rest of this section may produce different dialogs.
 
@@ -160,7 +163,7 @@ llava_injection.save_image(full_X, unnorm, name='perturb_full_X')
 llava_injection.save_image(partial_X, unnorm, name='perturb_partial_X')
 ```
 
-### Run Model Inference with the Perturbed Images
+### Run model inference with the perturbed images
 
 Define the query list to create a dialog
 
@@ -414,7 +417,7 @@ I like cows. I'm a fan of cows.
 
 ---
 
-### Sounds Perturbation
+### Sound Perturbation
 
 ### Set path of the input audio file and the initial query
 
@@ -454,6 +457,8 @@ Save the optimized image through `pandagpt_injection.save_audio()`
 ```bash
 pandagpt_injection.save_audio(audio_X, name='perturb_audio_X')
 ```
+
+### Run model inference with the perturbed audio
 
 Run the model inference by inputting perturbed audios we trained
 

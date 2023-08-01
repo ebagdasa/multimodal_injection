@@ -12,17 +12,17 @@
 
 [[arXiv Paper](https://arxiv.org/abs/2307.10490)]
 
-**This repository is still work in progress.** Please raise an issue or email (eugene@cs.cornell.edu) for questions/problems.
+Please raise an issue or email (eugene@cs.cornell.edu) for questions/problems.
 
 # Contents
 
 - [Overview](#overview)
 - [Install](#install)
 - [Experiments](#experiments)
-  - [Injection Attacks in LLaVA](#injection-attacks-in-llava)
+  - [Injection Attacks in LLaVA](#injection-attacks-in-llava) :camera_flash:
   - [Injection Attacks in PandaGPT](#injection-attacks-in-pandagpt)
-    - [Image Perturbation](#image-perturbation)
-    - [Sound Perturbation](#sound-perturbation)
+    - [Image Perturbation](#image-perturbation) :camera_flash:
+    - [Sound Perturbation](#sound-perturbation) :loud_sound:
 - [Other Examples](#other-examples)
 - [Citation](#citation)
 
@@ -70,15 +70,15 @@ We use two open-source multi-modal LLMs, LLaVA and PandaGPT to experiment our at
    pip install -r requirements.txt
    ```
 
-4. Download model weights for LLaVA
+4. Download model checkpoints for LLaVA
 
-   Please refer to this [link](https://github.com/haotian-liu/LLaVA/tree/main#llava-weights) from [LLaVA](https://github.com/haotian-liu/LLaVA) repository to download the model weights and save it to the models folder.
+   Please refer to this [link](https://github.com/haotian-liu/LLaVA/tree/main#llava-weights) from [LLaVA](https://github.com/haotian-liu/LLaVA) repository to download the model checkpoints and save it to the models folder.
 
    We use LLaVA-7B weights in our experiments.
 
-5. Download model weights for PandaGPT
+5. Download model checkpoints for PandaGPT
 
-   Please refer to this [link](https://github.com/yxuansu/PandaGPT#2-running-pandagpt-demo-back-to-top) from [PandaGPT](https://github.com/yxuansu/PandaGPT) repository to download the model weights and save it to the models folder.
+   Please refer to this [link](https://github.com/yxuansu/PandaGPT#2-running-pandagpt-demo-back-to-top) from [PandaGPT](https://github.com/yxuansu/PandaGPT) repository to download all the model checkpoints (ImageBind, Vicuna, PandaGPT) and save them to the models folder.
 
    We use pandagpt_7b_max_len_1024 weight in our experiments.
 
@@ -313,7 +313,7 @@ image_path = 'assets/images/bird_image.jpg' # PATH_TO_THE_IMAGE
 init_query = 'Can you describe this image?'
 ```
 
-### Load image and model parameters
+### Load image and prompt
 
 ```bash
 image_tensor = pandagpt_injection.load_image(image_path)
@@ -452,6 +452,13 @@ pandagpt_injection.save_audio(audio_X, name='perturb_audio_X')
 ```
 
 ### Run model inference with the perturbed audio
+
+Define the query list to create a dialog
+
+```bash
+# The first query in this query_list should be same as the init_query
+query_list_audio = ['Can you describe this image?']
+```
 
 Run the model inference by inputting perturbed audios we trained
 

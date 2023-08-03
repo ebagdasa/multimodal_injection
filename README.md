@@ -244,7 +244,7 @@ I see a wooden pier, a bench, and a lake in this image.
 We can also load the perturbed image that was trained before and run the model inference with it
 
 ```bash
-# Load the previous perturbed image from pt file
+# Load the previous perturbed image from .pt file!
 load_X = torch.load('result_images/llava/path_to_the_image.pt')
 
 # Run the model inference result
@@ -489,7 +489,7 @@ We can also load the perturbed image/audio that was trained before and run the m
 it
 
 ```bash
-# Load the previous perturbed image/audio from pt file
+# Load the previous perturbed image/audio from .pt file!
 image_X = torch.load('result_images/pandagpt/path_to_the_image.pt')
 audio_X = torch.load('result_audios/path_to_the_audio.pt')
 

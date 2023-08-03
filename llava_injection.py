@@ -336,7 +336,7 @@ def train_image_partial(
 
 def save_image(X, unnorm, name="test"):
     # save image to .jpg
-    save_img_path = "result_images/llava/" + name + ".jpg"
+    save_img_path = "result_images/llava/" + name + ".png"
 
     # save the image tensor to .pt
     save_pt_path = "result_images/llava/" + name + ".pt"

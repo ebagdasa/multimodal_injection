@@ -447,7 +447,7 @@ def train_audio_entire(X, y_text, model, epochs=200, lr=0.01):
 
 def save_image(X, name="test"):
     # save image to .jpg
-    save_img_path = "result_images/pandagpt/" + name + ".jpg"
+    save_img_path = "result_images/pandagpt/" + name + ".png"
 
     # save the image tensor to .pt
     save_pt_path = "result_images/pandagpt/" + name + ".pt"

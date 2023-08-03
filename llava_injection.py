@@ -335,13 +335,13 @@ def train_image_partial(
 
 
 def save_image(X, unnorm, name="test"):
-    # save image to .jpg
-    save_img_path = "result_images/llava/" + name + ".png"
+    # save image to .png
+    # save_img_path = "result_images/llava/" + name + ".png"
 
     # save the image tensor to .pt
     save_pt_path = "result_images/llava/" + name + ".pt"
 
-    transform(unnorm(X.data[0].detach().cpu())).save(save_img_path)
+    # transform(unnorm(X.data[0].detach().cpu())).save(save_img_path)
     torch.save(X, save_pt_path)
 
 

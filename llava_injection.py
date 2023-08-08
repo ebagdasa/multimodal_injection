@@ -18,6 +18,8 @@ import torchvision.transforms as T
 from tqdm import tqdm
 
 transform = T.ToPILImage()
+
+import torchvision
 import torch.optim as optim
 import json
 import numpy as np
@@ -335,13 +337,12 @@ def train_image_partial(
 
 
 def save_image(X, unnorm, name="test"):
-    # save image to .png
+    ## save image to .png
     # save_img_path = "result_images/llava/" + name + ".png"
+    # torchvision.utils.save_image(unnorm(X.data[0].detach().cpu()), save_img_path)
 
     # save the image tensor to .pt
     save_pt_path = "result_images/llava/" + name + ".pt"
-
-    # transform(unnorm(X.data[0].detach().cpu())).save(save_img_path)
     torch.save(X, save_pt_path)
 
 

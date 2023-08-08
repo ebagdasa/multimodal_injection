@@ -15,6 +15,7 @@ transform_image = T_image.ToPILImage()
 import torch.optim as optim
 import json
 import numpy as np
+import torchvision
 
 import header
 import gc
@@ -446,13 +447,12 @@ def train_audio_entire(X, y_text, model, epochs=200, lr=0.01):
 
 
 def save_image(X, name="test"):
-    # save image to .png
+    ## save image to .png
     # save_img_path = "result_images/pandagpt/" + name + ".png"
+    # torchvision.utils.save_image(unnorm(X.data[0].detach().cpu()), save_img_path)
 
     # save the image tensor to .pt
     save_pt_path = "result_images/pandagpt/" + name + ".pt"
-
-    # transform_image(unnorm(X.data[0].detach().cpu())).save(save_img_path)
     torch.save(X, save_pt_path)
 
 

@@ -158,7 +158,7 @@ Use `llava_injection.train_image_partial()` function with corresponding `X` and 
 partial_X = llava_injection.train_image_partial(input_ids, X, y, model, vision_tower, projector, epochs=100, lr=0.01, rows=20)
 ```
 
-Save the optimized image through `llava_injection.save_image()`
+Save the optimized image tensors through `llava_injection.save_image()`
 
 ```bash
 llava_injection.save_image(full_X, unnorm, name='perturb_full_X')
@@ -351,7 +351,7 @@ partial_X = pandagpt_injection.train_image_partial(X, y_text, model, epochs=500,
 
 ```
 
-Save the optimized image through `pandagpt_injection.save_image()`
+Save the optimized image tensors through `pandagpt_injection.save_image()`
 
 ```bash
 pandagpt_injection.save_image(full_X, name='perturb_full_X')
@@ -450,7 +450,7 @@ full image perturbation
 audio_X = pandagpt_injection.train_audio_entire(X, y_text, model, epochs=500, lr=0.01)
 ```
 
-Save the optimized image through `pandagpt_injection.save_audio()`
+Save the optimized audio tensors through `pandagpt_injection.save_audio()`
 
 ```bash
 pandagpt_injection.save_audio(audio_X, name='perturb_audio_X')

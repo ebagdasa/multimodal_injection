@@ -19,8 +19,8 @@ import torchvision
 
 import header
 import gc
-from pandagpt_injection.code.model.openllama import OpenLLAMAPEFTModel
-from pandagpt_injection.code.model.ImageBind.data import (
+from pandagpt.code.model.openllama import OpenLLAMAPEFTModel
+from pandagpt.code.model.ImageBind.data import (
     load_and_transform_vision_data,
     load_and_transform_audio_data,
 )

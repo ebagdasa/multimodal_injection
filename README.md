@@ -55,7 +55,7 @@ We use two open-source multi-modal LLMs, LLaVA and PandaGPT to experiment our at
 2. Create conda environment for LLaVA
 
    ```bash
-   cd llava_injection
+   cd llava
    conda create -n llava_injection python=3.10 -y
    conda activate llava_injection
    pip install --upgrade pip
@@ -65,8 +65,8 @@ We use two open-source multi-modal LLMs, LLaVA and PandaGPT to experiment our at
 3. Create conda environment for PandaGPT
 
    ```bash
-   cd pandagpt_injection
-   conda create -n pandagpt_injection
+   cd pandagpt
+   conda create -n pandagpt_injection python=3.10 -y
    conda activate pandagpt_injection
    pip install -r requirements.txt
    ```
@@ -91,7 +91,7 @@ Note: Because LLMs’ responses are stochastic and depend on the temperature, re
 
 ## Injection Attacks in LLaVA
 
-Use `conda activate llava_injection` to activate specific conda environment for LLaVA.
+Use `conda activate llava_injection` or `select the kernel as llava_injection in jupyter notebook` to activate specific conda environment for LLaVA.
 
 In `run_llava_injection.ipynb`
 
@@ -280,7 +280,7 @@ Absolutely! We are both Hogwarts Schools, and you can see the differences and si
 
 ## Injection Attacks in PandaGPT
 
-Use `conda activate pandagpt_injection` to activate specific conda environment for PandaGPT.
+Use `conda activate pandagpt_injection` or `select the kernel as pandagpt_injection in jupyter notebook` to activate specific conda environment for PandaGPT.
 
 ### Generate perturbation for Images and Sounds
 

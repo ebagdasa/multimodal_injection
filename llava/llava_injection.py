@@ -224,7 +224,7 @@ def train_image_entire(
             cur_input_embeds = inputs_embeds[0]
             num_patches = cur_image_features.shape[0]
 
-            image_start_tokens = torch.where(cur_input_ids == 32001)[0]
+            image_start_tokens = torch.where(cur_input_ids == 32002)[0]
 
             image_start_token_pos = image_start_tokens.item()
             cur_image_features = image_features[0].to(device=cur_input_embeds.device)
@@ -300,7 +300,7 @@ def train_image_partial(
             cur_input_embeds = inputs_embeds[0]
             num_patches = cur_image_features.shape[0]
 
-            image_start_tokens = torch.where(cur_input_ids == 32001)[0]
+            image_start_tokens = torch.where(cur_input_ids == 32002)[0]
 
             image_start_token_pos = image_start_tokens.item()
             cur_image_features = image_features[0].to(device=cur_input_embeds.device)
